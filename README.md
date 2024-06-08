@@ -1,7 +1,3 @@
-[![Stand With Palestine](https://raw.githubusercontent.com/TheBSD/StandWithPalestine/main/banner-no-action.svg)](https://thebsd.github.io/StandWithPalestine)
-
-#  <img src="https://github.com/takitajwar17/Simple-Todo-List-Refactored/assets/111155827/4b1c2e01-f24b-4f39-899e-c356d468e386" width="300">
-
 ## Simple Todo List App Docs
 
 ## Table of Contents
@@ -70,53 +66,6 @@ The project follows a modular and organized structure to enhance readability, ma
 - **Boxicons:** Icons library, linked through CDN.
 - **Google Fonts (Poppins):** Font used for the app, linked in the `style.css` file.
 
-## 6. Code Refactoring
-
-### Code Smells Addressed:
-
-1. **Monolithic Structure:**
-   - **Code Smell:** Original code had a monolithic structure, making it harder to maintain.
-   - **Refactoring:** Introduced modularization through separate classes (`TodoItemFormatter`, `TodoManager`, `UIManager`, and `ThemeSwitcher`), each with a distinct responsibility.
-
-2. **Global Functions:**
-   - **Code Smell:** Original code used global functions for event handling, reducing modularity.
-   - **Refactoring:** Event handling encapsulated within the `UIManager` class, promoting better organization and separation of concerns.
-
-3. **HTML Manipulation in Multiple Places:**
-   - **Code Smell:** Original code directly manipulated HTML in scattered locations.
-   - **Refactoring:** Centralized HTML manipulation within the `UIManager` class for consistency.
-
-4. **Lack of Error Handling:**
-   - **Code Smell:** Original code lacked proper error handling.
-   - **Refactoring:** Introduced error handling in the `UIManager` class for improved user experience and robustness.
-
-### SOLID Violations Addressed:
-
-1. **Single Responsibility Principle (SRP):**
-   - **Violation:** Original code violated SRP by combining UI, business logic, and theme handling.
-   - **Refactoring:** Responsibilities separated into different classes (`TodoManager`, `UIManager`, `ThemeSwitcher`), adhering to SRP.
-
-2. **Open/Closed Principle (OCP):**
-   - **Violation:** Original code was less extensible, requiring modifications for new features.
-   - **Refactoring:** Designed for extensibility, allowing addition of new features without modifying existing classes.
-
-3. **Dependency Inversion Principle (DIP):**
-   - **Violation:** Original code exhibited high coupling.
-   - **Refactoring:** Followed DIP by depending on abstractions, enhancing flexibility and testability.
-
-### Design Pattern Violations Addressed:
-
-1. **Observer Pattern for Event Handling:**
-   - **Violation:** Original code used inline event listeners.
-   - **Refactoring:** Employed Observer pattern by encapsulating event handling within the `UIManager` class.
-
-2. **Strategy Pattern for Task Formatting:**
-   - **Violation:** Original code lacked a clear strategy for formatting tasks.
-   - **Refactoring:** Introduced a `TodoItemFormatter` class, applying the Strategy pattern for consistent task formatting.
-
-3. **Singleton Pattern for Theme Handling:**
-   - **Violation:** Original code lacked a clear structure for theme handling.
-   - **Refactoring:** Introduced a `ThemeSwitcher` class, applying the Singleton pattern for centralized theme management and persistence.
 
 ### Class Responsibilities:
 
@@ -171,8 +120,3 @@ The TO-DOIT App is deployed and accessible online. You can use the following lin
 7. **Theme Switching:**
    - Use the palette icon in the top-right corner to open the theme switcher.
    - Select a theme from the available options.
-
-
-## 9. License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) and was originally developed by [@abdellatif-laghjaj](https://github.com/abdellatif-laghjaj) with the contribution of [@takitajwar17](https://github.com/takitajwar17). 
